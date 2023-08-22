@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  padding: 20px;
+  padding: 36px 20px;
   /* min-height: 65vh; */
   @media (min-width: 969px) {
     padding: 90px 80px;
@@ -18,8 +18,8 @@ export const Main = styled.main`
 `;
 export const ProductImg = styled.figure`
   flex: 1;
-  min-width: 30vw;
   height: 424px;
+  overflow: hidden;
   & > img {
     width: 100%;
     height: 100%;

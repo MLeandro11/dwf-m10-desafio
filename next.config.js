@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
-const withSvgr = require('next-svgr')
+const withSvgr = require("next-svgr");
 
 const nextConfig = withSvgr({
   reactStrictMode: true,
-  compiler:{
-    styledComponents: true
-  }})
-  
-module.exports = nextConfig
+  images: {
+    domains: ["v5.airtableusercontent.com"],
+  },
+  compiler: {
+    styledComponents: true,
+  },
+});
+
+module.exports = nextConfig;

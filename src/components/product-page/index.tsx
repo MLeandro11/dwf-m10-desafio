@@ -10,13 +10,20 @@ import {
 } from "./styled";
 import { priceFormat } from "@/utils";
 import { Product as ProductType } from "@/types";
+import Image from "next/image";
 
 export function Product({ product }: { product: ProductType }) {
   return (
     <Section id="top">
       <Main>
         <ProductImg>
-          <img src={product?.images[0].url} alt={product.name} />
+          <Image
+            priority
+            src={product?.images[0].url}
+            width={500}
+            height={500}
+            alt={product.name}
+          />
         </ProductImg>
         <ProductInfo>
           <HeaderInfo>

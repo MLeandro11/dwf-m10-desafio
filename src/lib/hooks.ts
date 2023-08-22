@@ -45,7 +45,7 @@ export function useSession(
     ) {
       Router.push(redirectTo)
     }
-  }, [data, redirectIfFound, redirectTo])
+  }, [data, redirectIfFound, redirectTo, isLoading, isValidating])
 
 
   const logout = () => {

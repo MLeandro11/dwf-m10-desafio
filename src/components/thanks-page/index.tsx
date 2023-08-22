@@ -5,6 +5,7 @@ import { Caption, Subtitle, Text } from "@/ui/typography";
 import { priceFormat } from "@/utils";
 import Link from "next/link";
 import { Section, Header, Article, Footer } from "./styled";
+import Image from "next/image";
 
 export function Thanks({ orderId }: { orderId: string }) {
   const { order, error, loading } = useOrder(orderId);
@@ -24,7 +25,13 @@ export function Thanks({ orderId }: { orderId: string }) {
       <main>
         <Article>
           <div className="article__img">
-            <img src={order?.product.image} alt="img-product" />
+            <Image
+              priority
+              src={order?.product.image}
+              width={500}
+              height={500}
+              alt="img-product"
+            />
           </div>
           <div className="article__info">
             <Caption $bold>{order?.product.name}</Caption>

@@ -17,8 +17,10 @@ export const Article = styled.article`
   display: flex;
   & > .article__img {
     width: 100px;
+    height: 100px;
     & > img {
       width: 100%;
+      height: 100%;
       display: block;
     }
   }

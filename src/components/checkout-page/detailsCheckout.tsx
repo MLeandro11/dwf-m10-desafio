@@ -2,6 +2,7 @@ import { Caption, Text } from "@/ui/typography";
 import { Divider } from "@/ui/divider";
 import { Details, ProductDetail, ProductInfo } from "./styled";
 import { priceFormat } from "@/utils";
+import Image from "next/image";
 
 type Props = {
   name: string;
@@ -15,7 +16,13 @@ export function DetailsCheckout({ name, unit_cost, images }: Props) {
       <Caption $bold>Resumen del pedido</Caption>
       <Divider />
       <ProductDetail>
-        <img src={images[0].url} alt={name} />
+        <Image
+          priority
+          src={images[0].url}
+          width={500}
+          height={500}
+          alt={name}
+        />
         <div>
           <Text>{name}</Text>
           <Text>{priceFormat(unit_cost)}</Text>

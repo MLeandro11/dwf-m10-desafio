@@ -49,6 +49,7 @@ export const TextField = React.forwardRef(
     );
   }
 );
+TextField.displayName = "TextField";
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   options: string[];
@@ -76,3 +77,4 @@ export const SelectField = forwardRef(
     );
   }
 );
+SelectField.displayName = "SelectField";
