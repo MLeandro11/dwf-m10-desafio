@@ -16,7 +16,7 @@ export function Card({
   return (
     <MyCard>
       <Image
-        priority
+        priority={false}
         src={img_url}
         width={500}
         height={500}

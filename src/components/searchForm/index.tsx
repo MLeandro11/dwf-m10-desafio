@@ -15,7 +15,6 @@ export function SearchForm({ dark }: { dark?: boolean }) {
     e.preventDefault();
     const query = (e.target as HTMLFormElement).query.value.trim();
     if (query.length <= 1) return;
-    console.log(query);
     router.push(`/search?query=${query}`);
   };
   return (
